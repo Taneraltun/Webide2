@@ -1,0 +1,78 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Dialog showHeader="true" title="{i18n>ServiceTitle}">
+		<l:VerticalLayout width="40rem">
+			<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+				adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+				singleContainerFullSize="false">
+				<f:content>
+					<Label text="{i18n>MATNR}"/>
+					<Input value="{singleServiceModel>/Matnr}" maxLength="40" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>MAKTX}"/>
+					<Input value="{singleServiceModel>/Maktx}" maxLength="40">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>EKGRP}"/>
+					<Input value="{singleServiceModel>/Ekgrp}" maxLength="3" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>EKORG}"/>
+					<Input value="{singleServiceModel>/Ekorg}" maxLength="4" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>LIFNR}"/>
+					<Input value="{singleServiceModel>/Lifnr}" maxLength="10" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>GPREIS}"/>
+					<Input value="{singleServiceModel>/Gpreis}" maxLength="18">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>WAERS}"/>
+					<Input value="{singleServiceModel>/Waers}" maxLength="5" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>SAKNR}"/>
+					<Input value="{singleServiceModel>/Saknr}" maxLength="10" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>MENGE}"/>
+					<Input value="{singleServiceModel>/Menge}" maxLength="17">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>EINHEIT}"/>
+					<Input value="{singleServiceModel>/Einheit}" maxLength="20" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+				</f:content>
+			</f:SimpleForm>
+		</l:VerticalLayout>
+		<buttons>
+			<Button id="buttonZSERSubmitCloseButton" text="{i18n>SubmitClose}" press="onAddCloseService" type="Transparent"/>
+			<Button id="buttonZSERSubmitButton" text="{i18n>Submit}" press="onAddService" type="Transparent"/>
+			<Button text="{i18n>Cancel}" press="onCloseServiceDialog" type="Transparent"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,140 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<VBox class="sapUiSmallMargin">
+		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" title="{i18n>GeneralData}" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
+			labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+			singleContainerFullSize="false">
+			<f:content>
+				<Label text="{i18n>Auart}" required="true"/>
+				<Text width="auto" text="{generalModel>/Auart}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Werks}"/>
+				<Text width="auto" text="{generalModel>/Werks}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S12"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Ilart}"/>
+				<Text text="{generalModel>/Ilart}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Vaplz}"/>
+				<Text text="{generalModel>/Vaplz}">
+					<layoutData>
+						<l:GridData span="XL4 L2 M4 S12"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Ingpr}"/>
+				<Text text="{generalModel>/Ingpr}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Tplnr}"/>
+				<Text text="{generalModel>/Tplnr}">
+					<layoutData>
+						<l:GridData span="XL4 L4 M4 S12"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Equnr}"/>
+				<Text text="{generalModel>/Equnr}">
+					<layoutData>
+						<l:GridData span="XL4 L4 M4 S12"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Stat}"/>
+				<Text text="{generalModel>/Stat}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Kostl}"/>
+				<Text text="{generalModel>/Kostl}">
+					<layoutData>
+						<l:GridData span="XL4 L4 M4 S12"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Zzistkonclk}"/>
+				<Text text="{generalModel>/Zzistkonclk}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Priok}"/>
+				<Text text="{generalModel>/Priok}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Anlzu}"/>
+				<Text text="{generalModel>/Anlzu}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Msaus}"/>
+				<Text text="{generalModel>/Msaus}">
+					<layoutData>
+						<l:GridData span="XL1 L1 M1 S1"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Zzdgisaciklm}"/>
+				<Text text="{generalModel>/Zzdgisaciklm}">
+					<layoutData>
+						<l:GridData span="XL4 L4 M4 S12"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Plnnr}"/>
+				<Text text="{generalModel>/Plnnr}">
+					<layoutData>
+						<l:GridData span="XL4 L4 M4 S12"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Zzhsponcelik}"/>
+				<Text text="{generalModel>/Zzhsponcelik}">
+					<layoutData>
+						<l:GridData span="XL4 L4 M4 S12"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Zgaranti}"/>
+				<Text text="{generalModel>/Zgaranti}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Erdat}"/>
+				<Text text="{path:'generalModel>/Erdat',formatter: '.formatter.dateFormat'}"></Text>
+				<Label text="{i18n>Aedat}"/>
+				<Text text="{path:'generalModel>/Aedat',formatter: '.formatter.dateFormat'}"></Text>
+				<Label text="{i18n>Oteil}"/>
+				<Text text="{generalModel>/Oteil}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Zzarz}"/>
+				<Text text="{generalModel>/Zzarz}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Zzsbp}"/>
+				<Text text="{generalModel>/Zzsbp}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+				<Label text="{i18n>Zzczm}"/>
+				<Text text="{generalModel>/Zzczm}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M2 S5"/>
+					</layoutData>
+				</Text>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</core:FragmentDefinition>

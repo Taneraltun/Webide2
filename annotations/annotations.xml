@@ -1,0 +1,232 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="/sap/opu/odata/sap/EAM_MALFUNCTION_MANAGE/$metadata">
+		<edmx:Include xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Namespace="EAM_MALFUNCTION_MANAGE"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs02/vocabularies/Org.OData.Aggregation.V1.xml">
+		<edmx:Include Alias="Aggregation" Namespace="Org.OData.Aggregation.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Capabilities.V1.xml">
+		<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470971/Communication.xml?api=v2">
+		<edmx:Include Alias="vCard" Namespace="com.sap.vocabularies.Communication.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Core.V1.xml">
+		<edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Measures.V1.xml">
+		<edmx:Include Alias="CQP" Namespace="Org.OData.Measures.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Authorization.V1.xml">
+		<edmx:Include Alias="Auth" Namespace="Org.OData.Authorization.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Validation.V1.xml">
+		<edmx:Include Alias="Validation" Namespace="Org.OData.Validation.V1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm">
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType">
+				<Annotation Term="UI.HeaderInfo">
+					<Record Type="UI.HeaderInfoType">
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Label" String="{@i18n&gt;MAINTENANCE_NOTIFICATION}"/>
+								<PropertyValue Property="Value" Path="MaintenanceNotification"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="TypeName" String="{@i18n&gt;MAINTENANCE_NOTIFICATION}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n&gt;MAINTENANCE_NOTIFICATIONS}"/>
+						<PropertyValue Property="TypeImageUrl">
+							<Apply Function="odata.fillUriTemplate">
+								<String>/sap/opu/odata/sap/EAM_MALFUNCTION_MANAGE/NotificationImageTypeSet(MaintenanceNotification='{MaintenanceNotification}')/$value</String>
+								<LabeledElement Name="MaintenanceNotification" Path="MaintenanceNotification"/>
+							</Apply>
+						</PropertyValue>
+						<PropertyValue Property="Description">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Value" Path="NotificationText"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType">
+				<Annotation Term="UI.HeaderInfo">
+					<Record Type="UI.HeaderInfoType">
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Value" Path="MaintenanceNotification"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="Description">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Value" Path="NotificationText"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="TypeName" String="{@i18n&gt;xtit.malfunctionReport}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n&gt;xtit.malfunctionReports}"/>
+						<PropertyValue Property="TypeImageUrl">
+							<Apply Function="odata.fillUriTemplate">
+								<String>/sap/opu/odata/sap/EAM_MALFUNCTION_MANAGE/NotificationImageTypeSet(MaintenanceNotification='{MaintenanceNotification}')/$value</String>
+								<LabeledElement Name="MaintenanceNotification" Path="MaintenanceNotification"/>
+							</Apply>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType">
+				<Annotation Term="UI.HeaderInfo">
+					<Record Type="UI.HeaderInfoType">
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Value" Path="MaintenanceOrderOperation"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="TypeName" String="{@i18n&gt;MAINTENANCE_JOB}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n&gt;xtit.maintenanceJobListTitle}"/>
+						<PropertyValue Property="Description">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Value" Path="OperationDescription"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="TypeImageUrl">
+							<Apply Function="odata.fillUriTemplate">
+								<String>/sap/opu/odata/sap/EAM_MALFUNCTION_MANAGE/NotificationImageTypeSet(MaintenanceNotification='{MaintenanceNotification}')/$value</String>
+								<LabeledElement Name="MaintenanceNotification" Path="MaintenanceNotification"/>
+							</Apply>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<!-- I_PersWrkAgrmtSrchHelp Value Help Customization -->
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.EAM_MALFUNCTION_MANAGE_Entities/I_PersWrkAgrmtSrchHelp">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="RequiredProperties">
+							<Collection/>
+						</PropertyValue>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection/>
+						</PropertyValue>
+						<PropertyValue Property="NonFilterableProperties">
+							<Collection>
+								<PropertyPath>OrganizationalUnitName</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/PersonExternalID">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/Person">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/UserID">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/CompanyCodeName">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/CostCenter">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/CostCenterName">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/Job">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/FirstName">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/LastName">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/JobName">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/OrganizationalUnitName">
+				<Annotation Term="Common.Label" String="{/#I_PMContactCardEmployeeType/OrganizationalUnit/@sap:label}"/>
+				<Annotation Term="Common.QuickInfo" String="{/#I_PMContactCardEmployeeType/OrganizationalUnit/@sap:label}"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/PersonWorkAgreement">
+				<Annotation Term="Common.Text" Path="PersonFullName"/>
+				<Annotation Term="Common.Label" String="{/#I_PMContactCardEmployeeType/PersonnelNumber/@sap:label}"/>
+				<Annotation Term="Common.QuickInfo" String="{/#I_PMContactCardEmployeeType/PersonnelNumber/@sap:label}"/>
+			</Annotations>
+			<!-- //I_PersWrkAgrmtSrchHelp Value Help Customization -->
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/MaintenanceOrderOperation">
+				<Annotation Term="Common.SemanticObject" String="MaintenanceOrderOperation"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechObjQuickVwType">
+				<Annotation Term="UI.FieldGroup" Qualifier="TechObjQuickView">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="TechObjIsEquipOrFuncnlLoc"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="TechnicalObjectLongText"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="TechnicalObjectCategory"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="SuperiorTechnicalObject"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="TechnicalObjectType"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="AssetManufacturerName"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="MaintenancePlant"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="PlantSection"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="AssetLocation"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="AssetRoom"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="ManufacturerPartTypeName"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="TechObjStructureIdentifierLvl1"/>
+									<PropertyValue Property="Label" Path="IdentifyingLabel"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="TechObjStructureIdentifierLvl2"/>
+									<PropertyValue Property="Label" Path="SecondIdentifyingLabel"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechObjQuickVwType/TechObjStructureIdentifierLvl1">
+				<Annotation Term="Common.FieldControl" Path="UxFcTechObjStrucIdentifierLvl1"/>
+			</Annotations>
+			<Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechObjQuickVwType/TechObjStructureIdentifierLvl2">
+				<Annotation Term="Common.FieldControl" Path="UxFcTechObjStrucIdentifierLvl2"/>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

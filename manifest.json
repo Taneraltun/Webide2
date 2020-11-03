@@ -1,0 +1,162 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "com.toros.ZPM_MALF_NOTIF",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"resources": "resources.json",
+		"dataSources": {
+			"mainService": {
+				"uri": "/sap/opu/odata/sap/ZPM_MALF_NOTIF_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			},
+			"malfunctionManage": {
+				"uri": "/sap/opu/odata/sap/EAM_MALFUNCTION_MANAGE/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"EAM_MALFUNCTION_MANAGE_ANNO_MDL",
+						"annotations"
+					],
+					"localUri": "localService/metadataMalf.xml"
+				}
+			},
+			"EAM_MALFUNCTION_MANAGE_ANNO_MDL": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='EAM_MALFUNCTION_MANAGE_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/EAM_MALFUNCTION_MANAGE_ANNO_MDL.xml"
+				}
+			},
+			"annotations": {
+				"type": "ODataAnnotation",
+				"uri": "annotations/annotations.xml",
+				"settings": {
+					"localUri": "annotations/annotations.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "sap.ui.ui5-template-plugin.1worklist",
+			"version": "1.71.26"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://task",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.toros.ZPM_MALF_NOTIF.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.66.0",
+			"libs": {
+				"sap.f": {},
+				"sap.m": {},
+				"sap.ui.core": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.toros.ZPM_MALF_NOTIF.i18n.i18n"
+				}
+			},
+			"mainService": {
+				"dataSource": "mainService",
+				"preload": true
+			},
+			"": {
+				"dataSource": "malfunctionManage",
+				"preload": true
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.toros.ZPM_MALF_NOTIF.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": [
+						"notFound"
+					]
+				},
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "worklist",
+					"target": [
+						"worklist"
+					]
+				},
+				{
+					"pattern": "GeneralDataSet/{objectId}",
+					"name": "object",
+					"target": [
+						"object"
+					]
+				}
+			],
+			"targets": {
+				"worklist": {
+					"viewName": "Worklist",
+					"viewId": "worklist",
+					"viewLevel": 1,
+					"title": "{i18n>worklistViewTitle}"
+				},
+				"object": {
+					"viewName": "Object",
+					"viewId": "object",
+					"viewLevel": 2,
+					"title": "{i18n>objectViewTitle}"
+				},
+				"objectNotFound": {
+					"viewName": "ObjectNotFound",
+					"viewId": "objectNotFound"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"viewId": "notFound"
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zpm_malf_notif",
+		"_version": "1.1.0"
+	}
+}

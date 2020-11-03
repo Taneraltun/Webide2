@@ -1,0 +1,19 @@
+<Annotations Target="ZPM_MALF_NOTIF.GeneralData/Auart" Bool="true">
+	<Annotation Term="Common.ValueList">
+		<Record Type="Common.ValueListType">
+			<PropertyValue Property="CollectionPath" String="VHOrderTypeSet">
+				<PropertyValue Property="SearchSupported" Bool="true">
+					<PropertyValue Property="Parameters">
+						<Collection>
+							<Record Type="Common.ValueListParameterInOut">
+								<PropertyValue Property="LocalDataProperty" PropertyPath="Auart"/>
+								<PropertyValue Property="ValueListProperty" String="Auart"/>
+							</Record>
+							<Record Type="Common.ValueListParameterDisplayOnly">
+								<PropertyValue Property="ValueListProperty" String="Txt"/>
+							</Record>
+						</Collection>
+					</PropertyValue>
+				</Record>
+			</Annotation>
+		</Annotations>

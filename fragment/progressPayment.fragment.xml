@@ -1,0 +1,90 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Dialog showHeader="true" title="{i18n>ProgressPayment}">
+		<l:VerticalLayout width="40rem">
+			<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+				adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+				singleContainerFullSize="false">
+				<f:content>
+					<Label text="{i18n>MATNR}"/>
+					<Input value="{singleProgressPaymentModel>/Matnr}" maxLength="40" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>MAKTX}"/>
+					<Input value="{singleProgressPaymentModel>/Maktx}" maxLength="40">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>EKGRP}"/>
+					<Input value="{singleProgressPaymentModel>/Ekgrp}" maxLength="3" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>EKORG}"/>
+					<Input value="{singleProgressPaymentModel>/Ekorg}" maxLength="4" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>LIFNR}"/>
+					<Input value="{singleProgressPaymentModel>/Lifnr}" maxLength="10" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>GPREIS}"/>
+					<Input value="{singleProgressPaymentModel>/Gpreis}" maxLength="18">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>WAERS}"/>
+					<Input value="{singleProgressPaymentModel>/Waers}" maxLength="5" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>SAKNR}"/>
+					<Input value="{singleProgressPaymentModel>/Saknr}" maxLength="10" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>KONNR}"/>
+					<Input value="{singleProgressPaymentModel>/Konnr}" maxLength="10">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>KTPNR}"/>
+					<Input value="{singleProgressPaymentModel>/Ktpnr}"  maxLength="5">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>MENGE}"/>
+					<Input value="{singleProgressPaymentModel>/Menge}" maxLength="17">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>EINHEIT}"/>
+					<Input value="{singleProgressPaymentModel>/Einheit}"  maxLength="20">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+				</f:content>
+			</f:SimpleForm>
+		</l:VerticalLayout>
+		<buttons>
+			<Button id="buttonZPPAYSubmitCloseButton" text="{i18n>SubmitClose}" press="onAddCloseProgressPayment" type="Transparent"/>
+			<Button id="buttonZPPAYSubmitButton" text="{i18n>Submit}" press="onAddProgressPayment" type="Transparent"/>
+			<Button text="{i18n>Cancel}" press="onCloseProgressPaymentDialog" type="Transparent"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

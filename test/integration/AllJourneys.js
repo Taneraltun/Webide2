@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/test/Opa5","./arrangements/Startup","./WorklistJourney","./NavigationJourney","./NotFoundJourney","./ObjectJourney"],function(e,t){"use strict";e.extendConfig({arrangements:new t,viewNamespace:"com.toros.ZPM_MALF_NOTIF.view.",autoWait:true})});

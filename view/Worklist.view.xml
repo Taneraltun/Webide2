@@ -1,0 +1,438 @@
+<mvc:View controllerName="com.toros.ZPM_MALF_NOTIF.controller.Worklist" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
+	xmlns:semantic="sap.f.semantic" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap"
+	xmlns:smartForm="sap.ui.comp.smartform" xmlns:sap.ui.layout="sap.ui.layout" xmlns:smartField="sap.ui.comp.smartfield"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartTable="sap.ui.comp.smarttable">
+	<uxap:ObjectPageLayout id="ObjectPageLayout">
+		<uxap:headerTitle>
+			<uxap:ObjectPageDynamicHeaderTitle>
+				<uxap:heading>
+					<Title text="{i18n>ObjectPageHeader}" wrapping="true"/>
+				</uxap:heading>
+				<uxap:actions>
+					<Button id="buttonSave" text="{i18n>Save}" icon="sap-icon://save" press="onSave" visible="{actionModel>/newVisible}"/>
+					<Button id="buttonChange" text="{i18n>Change}" icon="sap-icon://save" press="onSave" visible="{actionModel>/changeVisible}"/>
+				</uxap:actions>
+			</uxap:ObjectPageDynamicHeaderTitle>
+		</uxap:headerTitle>
+		<uxap:headerContent>
+			<Title text="{i18n>CreateNotification}" titleStyle="H6"/>
+		</uxap:headerContent>
+		<uxap:sections>
+			<uxap:ObjectPageSection titleUppercase="false" id="GeneralDataSection" title="{i18n>GeneralDataSection}">
+				<uxap:ObjectPageSubSection id="section1_SS1" titleUppercase="false">
+					<sap.ui.layout:VerticalLayout id="generalLayout" width="100%">
+						<sap.ui.layout:content></sap.ui.layout:content>
+					</sap.ui.layout:VerticalLayout>
+					<!--<VBox fitContainer="true">-->
+					<!--<smartForm:SmartForm editable="true">-->
+					<!--	<smartForm:layout>-->
+					<!--		<smartForm:ColumnLayout emptyCellsLarge="4" labelCellsLarge="4" columnsM="1" columnsL="1" columnsXL="1"/>-->
+					<!--	</smartForm:layout>-->
+					<!--	<smartForm:Group>-->
+					<!--		<smartForm:GroupElement>-->
+					<!--			<smartField:SmartField value="{Price}" id="idPrice"/>-->
+					<!--		</smartForm:GroupElement>-->
+					<!--	</smartForm:Group>-->
+					<!--</smartForm:SmartForm>-->
+					<!--<smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="C_Malfunctionreport"/>-->
+					<!--<smartTable:SmartTable smartFilterId="smartFilterBar" showFullScreenButton="true" entitySet="C_Malfunctionreport"-->
+					<!--	tableType="ResponsiveTable" header="{viewctrl>/title}" id="smartTable" class="sapUiResponsiveContentPadding">-->
+					<!--	<Table id="innerUi5Table" growing="true">-->
+					<!--		<ColumnListItem highlight="{path:'Material'}"/>-->
+					<!--	</Table>-->
+					<!--</smartTable:SmartTable>-->
+					<!--<smartTable:SmartTable id="malfuncManageJobListSmartTable" persistencyKey="malfuncManageJobListSmartTable" useVariantManagement="false"-->
+					<!--	demandPopin="true" enableAutoBinding="true" entitySet="C_Malfunctionreport" tableType="ResponsiveTable" useExportToExcel="true"-->
+					<!--	beforeRebindTable="onBeforeRebindTable" smartFilterId="malfuncManageJobListSmartFilterBar" header="{i18n>xtit.malfunctionReports}"-->
+					<!--	showRowCount="true" requestAtLeastFields="MaintenanceNotification,TechnicalObject,TechObjIsEquipOrFuncnlLoc,MaintNotifSourceApplication"-->
+					<!--	smartVariant="malfuncManageJobListSmartVariant"-->
+					<!--	ignoredFields="NotificationCreationTime,MalfunctionStartDate,MalfunctionStartTime,MalfunctionEndDate,MalfunctionEndTime,PersonInvolved">-->
+					<!--	<smartTable:customToolbar>-->
+					<!--		<OverflowToolbar design="Transparent">-->
+					<!--			<ToolbarSpacer/>-->
+					<!--			<Button icon="sap-icon://add" id="malfuncCreate" press="onCreatePressed" tooltip="{i18n>xtol.createMalfunctionReport}" type="Transparent"/>-->
+					<!--		</OverflowToolbar>-->
+					<!--	</smartTable:customToolbar>-->
+					<!--	<smartTable:customData>-->
+					<!--		<core:CustomData key="dateFormatSettings" value='\{"UTC":true,"style":"short"\}'/>-->
+					<!--		<core:CustomData key="p13nDialogSettings" value='{filter:{visible:false}}'/>-->
+					<!--	</smartTable:customData>-->
+					<!--	<Table growing="true" growingScrollToLoad="true">-->
+					<!--		<items>-->
+					<!--			<ColumnListItem press="onHandleRowPress" type="Navigation"-->
+					<!--				highlight="{= (${MaintPriorityColorCode} === 0 &amp;&amp; ${MaintPriority} !== '' ) ? 'Information' : ( ${MaintPriorityColorCode} === 1 ) ? 'Error': ( ${MaintPriorityColorCode} === 2 ) ? 'Warning' : ( ${MaintPriorityColorCode} === 3 ) ? 'Success' : 'None' }"></ColumnListItem>-->
+					<!--		</items>-->
+					<!--	</Table>-->
+					<!--</smartTable:SmartTable>-->
+					<!--</VBox>-->
+				</uxap:ObjectPageSubSection>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection titleUppercase="false" id="MaterialSection" title="{i18n>MaterialSection}">
+				<uxap:ObjectPageSubSection titleUppercase="false">
+					<Table id="tableMaterial" inset="false" items="{ path: 'materialModel>/'}">
+						<headerToolbar>
+							<OverflowToolbar>
+								<!--<Title text="{i18n>Matnr}" level="H2"/>-->
+								<ToolbarSpacer/>
+								<Button text="{i18n>NewMaterial}" type="Accept" icon="sap-icon://add" press="onOpenDialog" visible="{actionModel>/visible}"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="12em">
+								<Text text="{i18n>MATNR}"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>MAKTX}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+								<Text text="{i18n>MENGE}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>EINHEIT}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>LGORT}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>WERKS}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>CHARG}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>NETPR}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>NETWR}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>LABST}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center" visible="{actionModel>/visible}">
+								<Text text="{i18n>PROCESS}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{materialModel>Matnr}"/>
+									<Text text="{materialModel>Maktx}"/>
+									<Text text="{materialModel>Menge}"/>
+									<Text text="{materialModel>Einheit}"/>
+									<Text text="{materialModel>Lgort}"/>
+									<Text text="{materialModel>Werks}"/>
+									<Text text="{materialModel>Charg}"/>
+									<Text text="{materialModel>Netpr}"/>
+									<Text text="{materialModel>Netwr}"/>
+									<Text text="{materialModel>Labst}"/>
+									<HBox visible="{actionModel>/visible}">
+										<Button icon="sap-icon://edit" type="Transparent" press="onEditMaterial" visible="{actionModel>/visible}"/>
+										<Button icon="sap-icon://sys-cancel" type="Transparent" press="onDeleteMaterial" visible="{actionModel>/visible}"/>
+									</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</uxap:ObjectPageSubSection>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection titleUppercase="false" id="ServiceSection" title="{i18n>ServiceSection}">
+				<uxap:ObjectPageSubSection titleUppercase="false">
+					<Table id="tableService" inset="false" items="{ path: 'serviceModel>/'}">
+						<headerToolbar>
+							<OverflowToolbar>
+								<!--<Title text="{i18n>Matnr}" level="H2"/>-->
+								<ToolbarSpacer/>
+								<Button text="{i18n>NewService}" type="Accept" icon="sap-icon://add" press="onOpenServiceDialog" visible="{actionModel>/visible}"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="12em">
+								<Text text="{i18n>MATNR}"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>MAKTX}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+								<Text text="{i18n>EKGRP}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>EKORG}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>LIFNR}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>GPREIS}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>WAERS}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>SAKNR}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>MENGE}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>EINHEIT}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center" visible="{actionModel>/visible}">
+								<Text text="{i18n>PROCESS}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{serviceModel>Matnr}"/>
+									<Text text="{serviceModel>Maktx}"/>
+									<Text text="{serviceModel>Ekgrp}"/>
+									<Text text="{serviceModel>Ekorg}"/>
+									<Text text="{serviceModel>Lifnr}"/>
+									<Text text="{serviceModel>Gpreis}"/>
+									<Text text="{serviceModel>Waers}"/>
+									<Text text="{serviceModel>Saknr}"/>
+									<Text text="{serviceModel>Menge}"/>
+									<Text text="{serviceModel>Einheit}"/>
+									<HBox visible="{actionModel>/visible}">
+										<Button icon="sap-icon://edit" type="Transparent" press="onEditService" visible="{actionModel>/visible}"/>
+										<Button icon="sap-icon://sys-cancel" type="Transparent" press="onDeleteService" visible="{actionModel>/visible}"/>
+									</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</uxap:ObjectPageSubSection>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection titleUppercase="false" id="LaborSection" title="{i18n>LaborSection}">
+				<uxap:ObjectPageSubSection titleUppercase="false">
+					<Table id="tableLabor" inset="false" items="{ path: 'laborModel>/'}">
+						<headerToolbar>
+							<OverflowToolbar>
+								<!--<Title text="{i18n>Matnr}" level="H2"/>-->
+								<ToolbarSpacer/>
+								<Button text="{i18n>NewLabor}" type="Accept" icon="sap-icon://add" press="onOpenLaborDialog" visible="{actionModel>/visible}"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>ARBPL}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>WERKS}"/>
+							</Column>
+							<Column width="12em">
+								<Text text="{i18n>ISDD}"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>ISDZ}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+								<Text text="{i18n>IEDD}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>IEDZ}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>DAUNO}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>LTXA1}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>ARBEH}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center" visible="{actionModel>/visible}">
+								<Text text="{i18n>PROCESS}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{laborModel>Arbpl}"/>
+									<Text text="{laborModel>Werks}"/>
+									<Text text="{path:'laborModel>Isdd',formatter: '.formatter.dateFormat'}"/>
+									<Text text="{path:'laborModel>Isdz',formatter: '.formatter.timeFormat'}"/>
+									<Text text="{path:'laborModel>Iedd',formatter: '.formatter.dateFormat'}"/>
+									<Text text="{path:'laborModel>Iedz',formatter: '.formatter.timeFormat'}"/>
+									<Text text="{laborModel>Dauno}"/>
+									<Text text="{laborModel>Ltxa1}"/>
+									<Text text="{laborModel>Arbeh}"/>
+									<HBox visible="{actionModel>/visible}">
+										<Button icon="sap-icon://edit" type="Transparent" press="onEditLabor" visible="{actionModel>/visible}"/>
+										<Button icon="sap-icon://sys-cancel" type="Transparent" press="onDeleteLabor" visible="{actionModel>/visible}"/>
+									</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</uxap:ObjectPageSubSection>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection titleUppercase="false" id="ProgressPaymentSection" title="{i18n>ProgressPaymentSection}">
+				<uxap:ObjectPageSubSection titleUppercase="false">
+					<Table id="tableProgressPayment" inset="false" items="{ path: 'progressPaymentModel>/'}">
+						<headerToolbar>
+							<OverflowToolbar>
+								<!--<Title text="{i18n>Matnr}" level="H2"/>-->
+								<ToolbarSpacer/>
+								<Button text="{i18n>NewProgressPayment}" type="Accept" icon="sap-icon://add" press="onOpenProgressPaymentDialog"
+									visible="{actionModel>/visible}"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="12em">
+								<Text text="{i18n>MATNR}"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>MAKTX}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+								<Text text="{i18n>EKGRP}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>EKORG}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>LIFNR}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>GPREIS}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>WAERS}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>SAKNR}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>KONNR}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>KTPNR}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>MENGE}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>EINHEIT}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center" visible="{actionModel>/visible}">
+								<Text text="{i18n>PROCESS}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{progressPaymentModel>Matnr}"/>
+									<Text text="{progressPaymentModel>Maktx}"/>
+									<Text text="{progressPaymentModel>Ekgrp}"/>
+									<Text text="{progressPaymentModel>Ekorg}"/>
+									<Text text="{progressPaymentModel>Lifnr}"/>
+									<Text text="{progressPaymentModel>Gpreis}"/>
+									<Text text="{progressPaymentModel>Waers}"/>
+									<Text text="{progressPaymentModel>Saknr}"/>
+									<Text text="{progressPaymentModel>Konnr}"/>
+									<Text text="{progressPaymentModel>Ktpnr}"/>
+									<Text text="{progressPaymentModel>Menge}"/>
+									<Text text="{progressPaymentModel>Einhiet}"/>
+									<HBox visible="{actionModel>/visible}">
+										<Button icon="sap-icon://edit" type="Transparent" press="onEditProgressPayment" visible="{actionModel>/visible}"/>
+										<Button icon="sap-icon://sys-cancel" type="Transparent" press="onDeleteProgressPayment" visible="{actionModel>/visible}"/>
+									</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</uxap:ObjectPageSubSection>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection titleUppercase="false" id="SubOrderSection" title="{i18n>SubOrderSection}">
+				<uxap:ObjectPageSubSection titleUppercase="false">
+					<Table id="tableSubOrder" inset="false" items="{ path: 'subOrderModel>/'}">
+						<headerToolbar>
+							<OverflowToolbar>
+								<!--<Title text="{i18n>Matnr}" level="H2"/>-->
+								<ToolbarSpacer/>
+								<Button text="{i18n>NewSubOrder}" type="Accept" icon="sap-icon://add" press="onOpenSubOrderDialog" visible="{actionModel>/visible}"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="12em">
+								<Text text="{i18n>AUART}"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>VAPLZ}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>WERKS}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="{i18n>ILART}"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center" visible="{actionModel>/visible}">
+								<Text text="{i18n>PROCESS}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{subOrderModel>Auart}"/>
+									<Text text="{subOrderModel>Vaplz}"/>
+									<Text text="{subOrderModel>Werks}"/>
+									<Text text="{subOrderModel>Ilart}"/>
+									<HBox visible="{actionModel>/visible}">
+										<Button icon="sap-icon://edit" type="Transparent" press="onEditSubOrder" visible="{actionModel>/visible}"/>
+										<Button icon="sap-icon://sys-cancel" type="Transparent" press="onDeleteSubOrder" visible="{actionModel>/visible}"/>
+									</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</uxap:ObjectPageSubSection>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection titleUppercase="false" id="AttachmentSection" title="{i18n>AttachmentSection}">
+				<uxap:ObjectPageSubSection titleUppercase="false">
+					<UploadCollection id="uploadCollection" items="{AttachmentsModel>/}" maximumFilenameLength="55" maximumFileSize="5" multiple="true"
+						noDataText="{i18n>UploadCollectionNoDataText}" uploadUrl="/sap/opu/odata/sap/ZPM_MALF_NOTIF/AttachmentSet" sameFilenameAllowed="true"
+						instantUpload="false" showSeparators="All" filenameLengthExceed="onFilenameLengthExceed" fileSizeExceed="onFileSizeExceed"
+						typeMissmatch="onTypeMissmatch" uploadComplete="onUploadCompleteCollection" beforeUploadStarts="onBeforeUploadStarts"
+						fileDeleted="onFileDeleted" change="onUploadCollectionChange" fileType="PDF,XLS,XLSX,JPG,JPEG,PNG,TXT,PPT,PPTX,DOCX,DOC,ZIP,RAR,MP3,MP4,PNG"
+						class="sapUiMediumMarginTop sapUiSmallMarginBottom">
+						<items>
+							<UploadCollectionItem documentId="{AttachmentsModel>DocumentId}" fileName="{AttachmentsModel>fileName}"
+								mimeType="{AttachmentsModel>mimeType}" thumbnailUrl="{thumbnailUrl}"
+								url="{ path: 'AttachmentsModel>DocumentId', formatter:'.formatter.downloadLinkFormatter'}" deletePress="onFileDeleted">
+								<attributes>
+									<ObjectAttribute title="{i18n>CreatedUser}" text="{path : 'AttachmentsModel>CreatedUser'}"/>
+								</attributes>
+								<statuses>
+									<ObjectStatus title="{i18n>CreatedDate}"
+										text="{path:'AttachmentsModel>CreatedDate',type:'sap.ui.model.type.Date',formatOptions:{style:'short'}}"/>
+								</statuses>
+							</UploadCollectionItem>
+						</items>
+					</UploadCollection>
+					<!--<UploadCollection id="uploadCollectionDisplay" items="{path:'RequestToAttachment'}" maximumFilenameLength="55" maximumFileSize="5"-->
+					<!--	multiple="true" noDataText="{i18n>UploadCollectionNoDataText}" uploadUrl="/sap/opu/odata/sap/ZFI_CUST_REQ_SRV/AttachmentSet"-->
+					<!--	sameFilenameAllowed="true" instantUpload="false" showSeparators="All" filenameLengthExceed=".custReq.onFilenameLengthExceed"-->
+					<!--	fileSizeExceed=".custReq.onFileSizeExceed" typeMissmatch=".custReq.onTypeMissmatch" uploadComplete=".custReq.onUploadCompleteCollection"-->
+					<!--	beforeUploadStarts=".custReq.onBeforeUploadStarts" fileDeleted=".custReq.onFileDeleted" change=".custReq.onUploadCollectionChange"-->
+					<!--	fileType="PDF,XLS,XLSX,JPG,JPEG,PNG,TXT,PPT,PPTX,DOCX,DOC,ZIP,RAR,MP3,MP4,PNG" uploadButtonInvisible="false">-->
+					<!--	<items>-->
+					<!--		<UploadCollectionItem documentId="{DocumentId}" fileName="{fileName}" mimeType="{mimeType}" thumbnailUrl="{thumbnailUrl}"-->
+					<!--			url="{ path: 'DocumentId', formatter:'.formatter.downloadLinkFormatter'}" visibleDelete="false">-->
+					<!--			<attributes>-->
+					<!--				<ObjectAttribute title="{i18n>CreatedUser}" text="{path : 'CreatedUser'}"/>-->
+					<!--			</attributes>-->
+					<!--			<statuses>-->
+					<!--				<ObjectStatus title="{i18n>CreatedDate}" text="{path:'CreatedDate',type:'sap.ui.model.type.Date',formatOptions:{style:'short'}}"/>-->
+					<!--			</statuses>-->
+					<!--		</UploadCollectionItem>-->
+					<!--	</items>-->
+					<!--</UploadCollection>-->
+				</uxap:ObjectPageSubSection>
+			</uxap:ObjectPageSection>
+			<!--<uxap:ObjectPageSection titleUppercase="false" id="InterimPaymentSection" title="{i18n>InterimPaymentSection}">-->
+			<!--	<uxap:ObjectPageSubSection titleUppercase="false"></uxap:ObjectPageSubSection>-->
+			<!--</uxap:ObjectPageSection>-->
+		</uxap:sections>
+	</uxap:ObjectPageLayout>
+</mvc:View>

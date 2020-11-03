@@ -1,0 +1,16 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		title="{i18n>AuartVh}"
+		class="sapUiPopupWithPadding"
+		items="{ path: 'mainModel>/', templateShareable:false}"
+		search="_handleValueHelpSearchSource"
+		confirm="_handleValueHelpCloseSource"
+		cancel="_handleValueHelpCloseSource"
+		growingThreshold="20">
+		<StandardListItem
+			title="{generalModel>Auart}"
+			info="{generalModel>Autyp}"/>
+	</SelectDialog>
+</core:FragmentDefinition>

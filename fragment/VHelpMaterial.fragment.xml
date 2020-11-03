@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<!--<SelectDialog title="Parti" class="sapUiPopupWithPadding" -->
+	<!--items="{path: 'mainService>/HT006Set'}" search="_handleValueHelpSearchBatch"-->
+	<!--	confirm="_handleValueHelpCloseBatch" cancel="_handleValueHelpCloseBatch">-->
+	<!--	<StandardListItem title="{mainService>Mseh3}" description="{mainService>Msehi}"/>-->
+	<!--</SelectDialog>-->
+	<TableSelectDialog contentWidth="40rem" noDataText="{i18n>NoRecordFound}" title="{i18n>Select}" search="_handleValueHelpSearchBatch"
+		confirm="_handleValueHelpCloseBatch" cancel="_handleValueHelpCloseBatch" items="{mainService>/HT006Set}">
+		<columns>
+			<Column>
+				<Text text="{i18n>Mseh3}"/>
+			</Column>
+			<Column>
+				<Text text="{i18n>Msehi}"/>
+			</Column>
+
+		</columns>
+		<ColumnListItem vAlign="Middle">
+			<cells>
+				<Text text="{mainService>Mseh3}"/>
+				<Text text="{mainService>Msehi}"/>
+			</cells>
+		</ColumnListItem>
+	</TableSelectDialog>
+</core:FragmentDefinition>

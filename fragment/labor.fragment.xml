@@ -1,0 +1,94 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Dialog showHeader="true" title="{i18n>LaborTitle}">
+		<l:VerticalLayout width="40rem">
+			<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+				adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+				singleContainerFullSize="false">
+				<f:content>
+					<Label text="{i18n>ARBPL}"/>
+					<Input value="{singleLaborModel>/Arbpl}" maxLength="8" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>WERKS}"/>
+					<Input value="{singleLaborModel>/Werks}" maxLength="4" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>ISDD}"/>
+					<DatePicker visible="true"
+						value="{path:'singleLaborModel>/Isdd', type:'sap.ui.model.type.Date', formatOptions: {style: 'short', strictParsing: true}}">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</DatePicker>
+					<!--<Input value="{singleLaborModel>/Isdd}">-->
+					<!--	<layoutData>-->
+					<!--		<l:GridData span="XL6 L6 M6 S12"/>-->
+					<!--	</layoutData>-->
+					<!--</Input>-->
+					<Label text="{i18n>ISDZ}"/>
+					<TimePicker value="{singleLaborModel>/Isdz}" valueFormat="HH:mm" displayFormat="HH:mm" change="handleChange">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</TimePicker>
+					<!--<Input value="{singleLaborModel>/Isdz}">-->
+					<!--	<layoutData>-->
+					<!--		<l:GridData span="XL6 L6 M6 S12"/>-->
+					<!--	</layoutData>-->
+					<!--</Input>-->
+					<Label text="{i18n>IEDD}"/>
+					<DatePicker visible="true"
+						value="{path:'singleLaborModel>/Iedd', type:'sap.ui.model.type.Date', formatOptions: {style: 'short', strictParsing: true}}">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</DatePicker>
+					<!--<Input value="{singleLaborModel>/Iedd}">-->
+					<!--	<layoutData>-->
+					<!--		<l:GridData span="XL6 L6 M6 S12"/>-->
+					<!--	</layoutData>-->
+					<!--</Input>-->
+					<Label text="{i18n>IEDZ}"/>
+					<TimePicker value="{singleLaborModel>/Iedz}" valueFormat="HH:mm" displayFormat="HH:mm" change="handleChange">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</TimePicker>
+					<!--<Input value="{singleLaborModel>/Iedz}">-->
+					<!--	<layoutData>-->
+					<!--		<l:GridData span="XL6 L6 M6 S12"/>-->
+					<!--	</layoutData>-->
+					<!--</Input>-->
+					<Label text="{i18n>DAUNO}"/>
+					<Input value="{singleLaborModel>/Dauno}" maxLength="7">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>LTXA1}"/>
+					<Input value="{singleLaborModel>/Ltxa1}" maxLength="40">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>ARBEH}"/>
+					<Input value="{singleLaborModel>/Arbeh}" maxLength="3" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+				</f:content>
+			</f:SimpleForm>
+		</l:VerticalLayout>
+		<buttons>
+			<Button id="buttonZLABSubmitCloseButton" text="{i18n>SubmitClose}" press="onAddCloseLabor" type="Transparent"/>
+			<Button id="buttonZLABSubmitButton" text="{i18n>Submit}" press="onAddLabor" type="Transparent"/>
+			<Button text="{i18n>Cancel}" press="onCloseLaborDialog" type="Transparent"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

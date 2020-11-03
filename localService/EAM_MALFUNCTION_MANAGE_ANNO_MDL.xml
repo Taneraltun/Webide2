@@ -1,0 +1,1706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+   <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+      <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common" />
+   </edmx:Reference>
+   <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+      <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI" />
+   </edmx:Reference>
+   <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+      <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication" />
+   </edmx:Reference>
+   <edmx:Reference Uri="../../../sap/eam_malfunction_manage/$metadata">
+      <edmx:Include Namespace="EAM_MALFUNCTION_MANAGE" Alias="SAP" />
+   </edmx:Reference>
+   <edmx:DataServices>
+      <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="eam_malfunction_manage_anno_mdl.v1">
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/Material">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/NotificationType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/MaintenanceOrderType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/MaterialName">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/MaterialBaseUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/MaterialWeightUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/AvailabilityCheckType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/MatlWrhsStkQtyInMatlBaseUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/MatlWrhsStkQtyOnPlantLvl">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/RequirementQuantityInBaseUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/MaterialAvailabilityStatus">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/MaterialThumbnailMIMEType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/MaterialHasThumbnail">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType/AuthorizationGroup">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_AllMaterialsMalfuncManageType">
+            <Annotation Term="UI.HeaderInfo">
+               <Record>
+                  <PropertyValue Property="TypeName" String="Material" />
+                  <PropertyValue Property="TypeNamePlural" String="Materials" />
+                  <PropertyValue Property="Title">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="Material" />
+                     </Record>
+                  </PropertyValue>
+                  <PropertyValue Property="Description">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="MaterialName" />
+                     </Record>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/HierarchyNodeUniqueID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/BillOfMaterial">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/BillOfMaterialVariant">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/Material">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/NotificationType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/MaintenanceOrderType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/StorageLocation">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/Plant">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/MatlWrhsStkQtyInMatlBaseUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/MatlWrhsStkQtyOnPlantLvl">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/BillOfMaterialItemQuantity">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/BOMItemText2">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/RequirementQuantityInBaseUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/TechnicalObject">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/MaterialBaseUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/BillOfMaterialItemUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/BillOfMaterialItemNodeNumber">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/ConstructionMaterial">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/ParentNodeUniqueID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/HierarchyNodeLevel">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/DrillDownState">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/FunctionalLocation">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/Equipment">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/BillOfMaterialVariantUsage">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/BillOfMaterialCategory">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/RootDraftKey">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/BillOfMaterialComponent">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/IsConstructionMaterial">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/BillOfMaterialItemCategory">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/ConstructionMaterialName">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/AvailabilityCheckType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/MaterialThumbnailMIMEType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/MaterialHasThumbnail">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_BOMMaterialsMalFuncManageType/MaterialAvailabilityStatus">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_EAMUserDefaultValuesType/WorkCenterInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/TechnicalObject">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/Material">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/NotificationType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/MaintenanceOrderType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/MaterialName">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/RcrrcOfMatlUsageInTechObj">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/MaterialBaseUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/MaterialWeightUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/AvailabilityCheckType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/MatlWrhsStkQtyInMatlBaseUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/MatlWrhsStkQtyOnPlantLvl">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/MaterialAvailabilityStatus">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/RequirementQuantityInBaseUnit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/MaterialThumbnailMIMEType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType/MaterialHasThumbnail">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_HistMaterialsMalfuncManageType">
+            <Annotation Term="UI.HeaderInfo">
+               <Record>
+                  <PropertyValue Property="TypeName" String="Material" />
+                  <PropertyValue Property="TypeNamePlural" String="Materials" />
+                  <PropertyValue Property="Title">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="Material" />
+                     </Record>
+                  </PropertyValue>
+                  <PropertyValue Property="Description">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="MaterialName" />
+                     </Record>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_JobListStatusVHType/EAMOverallStatusProfile">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_JobListStatusVHType/EAMOverallStatus">
+            <Annotation Term="Common.Text" Path="EAMOverallStatus_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintenancePlannerGroupVHType/EmailAddress">
+            <Annotation Term="Communication.IsEmailAddress" />
+            <Annotation Term="UI.HiddenFilter" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintenancePlannerGroupVHType/MaintPlannerGroupPhoneNumber">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="Communication.IsPhoneNumber" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintenancePlannerGroupVHType">
+            <Annotation Term="Communication.Contact">
+               <Record>
+                  <PropertyValue Property="tel">
+                     <Collection>
+                        <Record>
+                           <PropertyValue Property="type" EnumMember="Communication.PhoneType/preferred" />
+                           <PropertyValue Property="uri" Path="MaintPlannerGroupPhoneNumber" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+                  <PropertyValue Property="email">
+                     <Collection>
+                        <Record>
+                           <PropertyValue Property="address" Path="EmailAddress" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifActivityTPType/DraftUUID">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifActivityTPType/HasActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifActivityTPType/HasDraftEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifActivityTPType/IsActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifActivityTPType/DraftEntityCreationDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifActivityTPType/DraftEntityLastChangeDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifActivityTPType/ParentDraftUUID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifActivityTPType/Preparation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifActivityTPType/Validation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/DraftUUID">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/HasActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/HasDraftEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/IsActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/DraftEntityCreationDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/DraftEntityLastChangeDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/ParentDraftUUID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/RootDraftUUID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/Delete_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/Preparation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationCauseTPType/Validation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/DraftUUID">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/HasActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/HasDraftEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/IsActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/MaintenanceNotification">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/MaintNotificationItemForEdit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/MaintNotifDamageCodeCatalog">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/MaintNotifObjPrtCodeCatalog">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/IsDeleted">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/DraftEntityCreationDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/DraftEntityLastChangeDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/ParentDraftUUID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/Delete_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/Preparation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationItemTPType/Validation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/DraftUUID">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/HasActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/HasDraftEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/IsActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/HierarchyNodeLevel">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/DraftEntityCreationDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/DraftEntityLastChangeDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Activation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Assign_order_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Changeassgmt_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Checkcompatibility_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Complete_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Create_order_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Edit_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Perform_user_action_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Postpone_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Preparation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Putinprocess_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/Validation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/MaintNotifSourceApplication_fc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/MaintenanceNotification">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceNotification" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/TechnicalObject">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceObject" />
+            <Annotation Term="Common.SemanticObjectMapping">
+               <Collection>
+                  <Record>
+                     <PropertyValue Property="LocalProperty" PropertyPath="TechnicalObject" />
+                     <PropertyValue Property="SemanticObjectProperty" String="TechnicalObject" />
+                  </Record>
+                  <Record>
+                     <PropertyValue Property="LocalProperty" PropertyPath="TechObjIsEquipOrFuncnlLoc" />
+                     <PropertyValue Property="SemanticObjectProperty" String="TechObjIsEquipOrFuncnlLoc" />
+                  </Record>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType/MaintenanceOrder">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceOrder" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotificationTPType">
+            <Annotation Term="UI.HeaderInfo">
+               <Record>
+                  <PropertyValue Property="TypeName" String="Maintenance Notification" />
+                  <PropertyValue Property="TypeNamePlural" String="Maintenance Notifications" />
+                  <PropertyValue Property="Title">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="MaintenanceNotification" />
+                     </Record>
+                  </PropertyValue>
+                  <PropertyValue Property="Description">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="NotificationText" />
+                     </Record>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+            <Annotation Term="UI.Identification">
+               <Collection>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="NotificationText" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="TechnicalObjectForEdit" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+               </Collection>
+            </Annotation>
+            <Annotation Term="UI.LineItem">
+               <Collection>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="NotificationText" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="TechnicalObjectForEdit" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/DraftUUID">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/HasActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/HasDraftEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/IsActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/DraftEntityCreationDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/DraftEntityLastChangeDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/ParentDraftUUID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/Preparation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/Validation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/MaintNotificationLongText">
+            <Annotation Term="UI.MultiLineText" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifLongTextTPType/MaintNotifLongTextForEdit">
+            <Annotation Term="UI.MultiLineText" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifRootCauseItemType/IsDeleted">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifRootCauseItemType/CreationDate">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifRootCauseItemType/TimeOfCreation">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintNotifRootCauseItemType">
+            <Annotation Term="UI.LineItem">
+               <Collection>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintNotifObjPrtCode" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintNotifItemText" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintNotificationDamageCode" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintNotificationCauseCode" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintNotificationActivityCode" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintenanceNotification" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />
+                  </Record>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintObjBreakdownSimplQType/BreakdownYear">
+            <Annotation Term="Common.IsCalendarYear" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintObjBreakdownSimplQType/ID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/DraftUUID">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/HasActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/HasDraftEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/IsActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/MaintenanceOrderComponent">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/MaintOrderComponentForEdit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/ReservationItem">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/ReservationType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/MaintOrderRoutingNumber">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/MaintOrderOperationCounter">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/MaterialThumbnailMIMEType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/MaterialHasThumbnail">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/DraftEntityCreationDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/DraftEntityLastChangeDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/ParentDraftUUID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/RootDraftUUID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/Delete_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/Preparation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType/Validation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderComponentTPType">
+            <Annotation Term="UI.LineItem">
+               <Collection>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="Material" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="RequirementQuantityInBaseUnit" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="QuantityWithdrawnInBaseUnit" />
+                  </Record>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderConfirmationTPType/DraftUUID">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderConfirmationTPType/HasActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderConfirmationTPType/HasDraftEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderConfirmationTPType/IsActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderConfirmationTPType/DraftEntityCreationDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderConfirmationTPType/DraftEntityLastChangeDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderConfirmationTPType/Activation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderConfirmationTPType/Edit_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderConfirmationTPType/Preparation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderConfirmationTPType/Validation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/DraftUUID">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/HasActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/HasDraftEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/IsActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/MaintOrderOperationForEdit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/MaintOrderRoutingNumber">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/MaintOrderOperationCounter">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/OperationWorkCenterInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/UserIsPersonResponsible">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/MaintOrderOperationInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/EAMOverallObjectStatusProfile">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/DraftEntityCreationDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/DraftEntityLastChangeDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/ParentDraftUUID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/Changeassgmt_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/Changescheduling_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/Createtimeconf_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/Create_component_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/Delete_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/Preparation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/Setdispatch_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/Unsetdispatch_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/Validation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="Common.Text" Path="to_TechObjIsEquipOrFuncnlLoc/TechObjIsEquipOrFuncnlLoc_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/OperationPersonResponsible">
+            <Annotation Term="Common.Text" Path="to_PersonResponsible/EmployeeFullName">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType/EAMOverallObjectStatus">
+            <Annotation Term="Common.Text" Path="to_OverallStatus/EAMOverallStatus_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderOperationTPType">
+            <Annotation Term="UI.FieldGroup" Qualifier="MalfunctionReportWorkItem">
+               <Record>
+                  <PropertyValue Property="Data">
+                     <Collection>
+                        <Record Type="UI.DataFieldWithNavigationPath">
+                           <PropertyValue Property="Label" String="Work Item" />
+                           <PropertyValue Property="Value" Path="MaintenanceOrderOperation" />
+                           <PropertyValue Property="Target" String="">
+                              <Annotation Term="Core.Messages">
+                                 <Collection>
+                                    <Record>
+                                       <PropertyValue Property="message" String="ERROR: Invalid Path" />
+                                       <PropertyValue Property="severity" String="error" />
+                                    </Record>
+                                 </Collection>
+                              </Annotation>
+                           </PropertyValue>
+                           <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+            <Annotation Term="UI.HeaderInfo">
+               <Record>
+                  <PropertyValue Property="TypeName" String="Maintenance Order Operation" />
+                  <PropertyValue Property="TypeNamePlural" String="Maintenance Order Operations" />
+                  <PropertyValue Property="Title">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="MaintenanceOrderOperation" />
+                     </Record>
+                  </PropertyValue>
+                  <PropertyValue Property="Description">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="OperationDescription" />
+                     </Record>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+            <Annotation Term="UI.LineItem">
+               <Collection>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintenanceOrderOperation" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="OperationWorkCenter" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="OperationPersonResponsible" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="OperationPlannedWork" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="ConfirmationTotalQuantity" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="IsFinallyConfirmed" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="EAMOverallObjectStatus" />
+                  </Record>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/DraftUUID">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/HasActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/HasDraftEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/IsActiveEntity">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/MaintenanceOrderForEdit">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/MaintPriorityType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/MaintenanceProcessingPhase">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/MaintObjectLocAcctAssgmtNmbr">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/MaintOrderRoutingNumber">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/MaintenanceOrderCategory">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/MaintenanceOrderInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/MaintOrderSourceApplication">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/DraftEntityCreationDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/DraftEntityLastChangeDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Activation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Cancelbusinesscomplete_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Canceltechnicalcomplete_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Changeassgmt_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Changescheduling_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Completebusiness_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Completetechnical_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Donotexecute_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Edit_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Preparation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Release_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/Validation_ac">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/MaintenanceOrder">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceOrder" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/TechnicalObject">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceObject" />
+            <Annotation Term="Common.SemanticObjectMapping">
+               <Collection>
+                  <Record>
+                     <PropertyValue Property="LocalProperty" PropertyPath="TechnicalObject" />
+                     <PropertyValue Property="SemanticObjectProperty" String="TechnicalObject" />
+                  </Record>
+                  <Record>
+                     <PropertyValue Property="LocalProperty" PropertyPath="TechObjIsEquipOrFuncnlLoc" />
+                     <PropertyValue Property="SemanticObjectProperty" String="TechObjIsEquipOrFuncnlLoc" />
+                  </Record>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/MaintenanceNotification">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceNotification" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="Common.Text" Path="to_TechObjIsEquipOrFuncnlLoc/TechObjIsEquipOrFuncnlLoc_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderTPType">
+            <Annotation Term="UI.HeaderInfo">
+               <Record>
+                  <PropertyValue Property="TypeName" String="Maintenance Order" />
+                  <PropertyValue Property="TypeNamePlural" String="Maintenance Orders" />
+                  <PropertyValue Property="Title">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="MaintenanceOrder" />
+                     </Record>
+                  </PropertyValue>
+                  <PropertyValue Property="Description">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="MaintenanceOrderDesc" />
+                     </Record>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MaintOrderUnplannedMatType">
+            <Annotation Term="UI.LineItem">
+               <Collection>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="QuantityInBaseUnit" />
+                  </Record>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionDetailCodesVHType/MaintenanceNotification">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionDetailCodesVHType/CatalogType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionDetailCodesVHType/NotificationType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionDetailCodesVHType/CatalogProfile">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionOvrStatsVHType/EAMOverallStatusProfile">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionOvrStatsVHType/EAMOverallStatus">
+            <Annotation Term="Common.Text" Path="EAMOverallStatus_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/to_Involvement">
+            <Annotation Term="UI.HiddenFilter" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/NotificationText">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/MaintNotifInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/MaintenanceOrderDesc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/WorkCenterInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/MaintPriorityColorCode">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/TechObjIsEquipOrFuncnlLocDesc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/Equipment">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/FunctionalLocationLabelName">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/MaintNotifSourceApplication">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/NotificationTimeZone">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/EAMOverallObjectStatusProfile">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/MaintenanceNotification">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceNotification" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/MaintenanceOrder">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceOrder" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/TechnicalObjectLabel">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceObject" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/PersonResponsible">
+            <Annotation Term="Common.Text" Path="to_PersonResponsible/EmployeeFullName">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/CreatedByUser">
+            <Annotation Term="Common.Text" Path="to_CreatedBy/FullName">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/EAMOverallObjectStatus">
+            <Annotation Term="Common.Text" Path="to_OverallStatus/EAMOverallStatus_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType/PersonInvolved">
+            <Annotation Term="Common.Text" Path="to_PersonInvolved/EmployeeFullName">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionreportType">
+            <Annotation Term="UI.FieldGroup" Qualifier="MaintenanceNotification">
+               <Record>
+                  <PropertyValue Property="Data">
+                     <Collection>
+                        <Record Type="UI.DataFieldWithIntentBasedNavigation">
+                           <PropertyValue Property="Label" String="Maintenance Notification" />
+                           <PropertyValue Property="SemanticObject" String="MaintenanceNotification" />
+                           <PropertyValue Property="Action" String="display" />
+                           <PropertyValue Property="Value" Path="MaintenanceNotification" />
+                           <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+            <Annotation Term="UI.HeaderInfo">
+               <Record>
+                  <PropertyValue Property="TypeName" String="Malfunction Report" />
+                  <PropertyValue Property="TypeNamePlural" String="Malfunction Reports" />
+                  <PropertyValue Property="Title">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="MaintenanceNotification" />
+                     </Record>
+                  </PropertyValue>
+                  <PropertyValue Property="Description">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="NotificationText" />
+                     </Record>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+            <Annotation Term="UI.LineItem">
+               <Collection>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintenanceNotification" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="PersonResponsible" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="EAMOverallObjectStatus" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="NotificationDateTime" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Criticality" Path="MaintPriorityColorCode" />
+                     <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
+                     <PropertyValue Property="Value" Path="MaintPriority" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportInvlmntsType/Equipment">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportInvlmntsType/FunctionalLocationLabelName">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportInvlmntsType/MaintenanceOrderDesc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportInvlmntsType/NotificationText">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportInvlmntsType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportInvlmntsType/ID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportInvlmntsType/MaintenanceNotification">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceNotification" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportInvlmntsType/MaintenanceOrder">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceOrder" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportInvlmntsType/TechnicalObjectLabel">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceObject" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportInvlmntsType">
+            <Annotation Term="UI.FieldGroup" Qualifier="MaintenanceNotification">
+               <Record>
+                  <PropertyValue Property="Data">
+                     <Collection>
+                        <Record Type="UI.DataFieldWithIntentBasedNavigation">
+                           <PropertyValue Property="Label" String="Maintenance Notification" />
+                           <PropertyValue Property="SemanticObject" String="MaintenanceNotification" />
+                           <PropertyValue Property="Action" String="display" />
+                           <PropertyValue Property="Value" Path="MaintenanceNotification" />
+                           <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+            <Annotation Term="UI.LineItem">
+               <Collection>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintenanceNotification" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="EAMOverallObjectStatus" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Criticality" String="">
+                        <Annotation Term="Core.Messages">
+                           <Collection>
+                              <Record>
+                                 <PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001" />
+                                 <PropertyValue Property="message" String="Property 'MaintPriorityColorCode' of annotation 'UI.LINEITEM' in proj./view 'C_MalfunctionReportInvlmnts' not found" />
+                                 <PropertyValue Property="severity" String="error" />
+                              </Record>
+                           </Collection>
+                        </Annotation>
+                     </PropertyValue>
+                     <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
+                     <PropertyValue Property="Value" Path="MaintPriority" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/MaintenanceOrderInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/MaintenanceOrderDesc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/NotificationText">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/OperationDescription">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/OperationWorkCenterInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/OperationWorkCenterTypeCode">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/EAMOverallObjectStatusProfile">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/MaintOrderSourceApplication">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/MaintPriorityColorCode">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/MaintPriority">
+            <Annotation Term="UI.Hidden" />
+            <Annotation Term="Common.Text" Path="to_JobListPriority/MaintPriority_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/MaintPriorityType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/MaintOrderOperationInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/TechnicalObject">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/Equipment">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/FunctionalLocationLabelName">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/MaintenanceNotification">
+            <Annotation Term="Common.SemanticObject" String="MaintenanceNotification" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/OperationPersonResponsible">
+            <Annotation Term="Common.Text" Path="to_OperationPersonResponsible/EmployeeFullName">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/EAMOverallObjectStatus">
+            <Annotation Term="Common.Text" Path="to_OverallStatus/EAMOverallStatus_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType/MaintenanceJobSelection">
+            <Annotation Term="Common.Text" Path="to_MaintenanceJobSelection/MaintenanceJobSelection_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_MalfunctionReportWorkItemType">
+            <Annotation Term="UI.HeaderInfo">
+               <Record>
+                  <PropertyValue Property="TypeName" String="Maintenance Job" />
+                  <PropertyValue Property="TypeNamePlural" String="Maintenance Jobs" />
+                  <PropertyValue Property="Title">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="MaintenanceOrderOperation" />
+                     </Record>
+                  </PropertyValue>
+                  <PropertyValue Property="Description">
+                     <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="OperationDescription" />
+                     </Record>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+            <Annotation Term="UI.LineItem">
+               <Collection>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintenanceNotification" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="MaintenanceOrderOperation" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="OperationPersonResponsible" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="OperationPlannedWork" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="EAMOverallObjectStatus" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="TechnicalObjectLabel" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Criticality" Path="MaintPriorityColorCode" />
+                     <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
+                     <PropertyValue Property="Value" Path="MaintPriority" />
+                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                  </Record>
+               </Collection>
+            </Annotation>
+            <Annotation Term="UI.SelectionFields">
+               <Collection>
+                  <PropertyPath>MaintenanceJobSelection</PropertyPath>
+                  <PropertyPath>OperationPersonResponsible</PropertyPath>
+                  <PropertyPath>EAMOverallObjectStatus</PropertyPath>
+                  <PropertyPath>TechnicalObjectLabel</PropertyPath>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_PMWorkCenterVHType/WorkCenterInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_PMWorkCenterVHType/WorkCenterTypeCode">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_PMWorkCenterVHType/WorkCenterCategoryCode">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_StorageLocationVHType">
+            <Annotation Term="UI.LineItem">
+               <Collection>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="StorageLocation" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="Plant" />
+                  </Record>
+                  <Record Type="UI.DataField">
+                     <PropertyValue Property="Value" Path="Material" />
+                  </Record>
+               </Collection>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/FunctionalLocationLabelName">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/Equipment">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/ABCIndicatorDesc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/WorkCenterInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/WorkCenterTypeCode">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/MainWorkCenterPlant">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/MainWorkCenterInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/MainWorkCenterTypeCode">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/MaintenancePlanningPlant">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/TechnicalObjectCategoryDesc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/HierarchyNodeLevel">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectFlatVHType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="Common.Text" Path="to_TechObjIsEquipOrFuncnlLoc/TechObjIsEquipOrFuncnlLoc_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectForEditVHType/TechnicalObject">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectForEditVHType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectForEditVHType/FunctionalLocationLabelName">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.C_TechnicalObjectForEditVHType/Equipment">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_Customer_VHType/CustomerAccountGroup">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_Customer_VHType/AuthorizationGroup">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_Customer_VHType/IsBusinessPurposeCompleted">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/DraftUUID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/DraftEntityType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/DraftAccessType">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/ProcessingStartDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/DraftIsKeptByUser">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/EnqueueStartDateTime">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/DraftIsCreatedByMe">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/DraftIsLastChangedByMe">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/DraftIsProcessedByMe">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/CreatedByUserDescription">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/LastChangedByUserDescription">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_DraftAdministrativeDataType/InProcessByUserDescription">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_EAMOverallStatusType/EAMOverallStatus">
+            <Annotation Term="Common.Text" Path="EAMOverallStatus_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_MaintenancePlannerGroupType/EmailAddress">
+            <Annotation Term="Communication.IsEmailAddress" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_MaintenancePlannerGroupType/MaintPlannerGroupPhoneNumber">
+            <Annotation Term="Communication.IsPhoneNumber" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_MaintenancePlannerGroupType">
+            <Annotation Term="Communication.Contact">
+               <Record>
+                  <PropertyValue Property="tel">
+                     <Collection>
+                        <Record>
+                           <PropertyValue Property="type" EnumMember="Communication.PhoneType/preferred" />
+                           <PropertyValue Property="uri" Path="MaintPlannerGroupPhoneNumber" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+                  <PropertyValue Property="email">
+                     <Collection>
+                        <Record>
+                           <PropertyValue Property="address" Path="EmailAddress" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/PersonWorkAgrmtAuthznGrpg">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/AuthorizationGroup">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PersWrkAgrmtSrchHelpType/IsBusinessPurposeCompleted">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMContactCardEmployeeType/DefaultEmailAddress">
+            <Annotation Term="Communication.IsEmailAddress" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMContactCardEmployeeType/EmployeeImageURL">
+            <Annotation Term="UI.Hidden" />
+            <Annotation Term="UI.IsImageURL" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMContactCardEmployeeType/UserID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMContactCardEmployeeType/PhoneNumber">
+            <Annotation Term="Communication.IsPhoneNumber" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMContactCardEmployeeType/MobilePhoneNumber">
+            <Annotation Term="Communication.IsPhoneNumber" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMContactCardEmployeeType">
+            <Annotation Term="Communication.Contact">
+               <Record>
+                  <PropertyValue Property="fn" Path="EmployeeFullName" />
+                  <PropertyValue Property="title" Path="JobName" />
+                  <PropertyValue Property="org" Path="OrganizationalUnitName" />
+                  <PropertyValue Property="n">
+                     <Record>
+                        <PropertyValue Property="given" Path="FirstName" />
+                        <PropertyValue Property="surname" Path="FamilyName" />
+                     </Record>
+                  </PropertyValue>
+                  <PropertyValue Property="photo" Path="EmployeeImageURL" />
+                  <PropertyValue Property="tel">
+                     <Collection>
+                        <Record>
+                           <PropertyValue Property="type" EnumMember="Communication.PhoneType/cell" />
+                           <PropertyValue Property="uri" Path="MobilePhoneNumber" />
+                        </Record>
+                        <Record>
+                           <PropertyValue Property="type" EnumMember="Communication.PhoneType/work" />
+                           <PropertyValue Property="uri" Path="PhoneNumber" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+                  <PropertyValue Property="email">
+                     <Collection>
+                        <Record>
+                           <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/work" />
+                           <PropertyValue Property="address" Path="DefaultEmailAddress" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMContactCardUserType/EmailAddress">
+            <Annotation Term="Communication.IsEmailAddress" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMContactCardUserType/InternationalPhoneNumber">
+            <Annotation Term="Communication.IsPhoneNumber" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMContactCardUserType/InternationalMobilePhoneNumber">
+            <Annotation Term="Communication.IsPhoneNumber" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMContactCardUserType">
+            <Annotation Term="Communication.Contact">
+               <Record>
+                  <PropertyValue Property="fn" Path="FullName" />
+                  <PropertyValue Property="title" Path="FunctionalTitleName" />
+                  <PropertyValue Property="org" Path="OrganizationalUnit" />
+                  <PropertyValue Property="n">
+                     <Record>
+                        <PropertyValue Property="given" Path="FirstName" />
+                        <PropertyValue Property="surname" Path="LastName" />
+                     </Record>
+                  </PropertyValue>
+                  <PropertyValue Property="tel">
+                     <Collection>
+                        <Record>
+                           <PropertyValue Property="type" EnumMember="Communication.PhoneType/cell" />
+                           <PropertyValue Property="uri" Path="InternationalMobilePhoneNumber" />
+                        </Record>
+                        <Record>
+                           <PropertyValue Property="type" EnumMember="Communication.PhoneType/work" />
+                           <PropertyValue Property="uri" Path="InternationalPhoneNumber" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+                  <PropertyValue Property="email">
+                     <Collection>
+                        <Record>
+                           <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/work" />
+                           <PropertyValue Property="address" Path="EmailAddress" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMNotificationPriorityType/MaintPriority">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMNotificationPriorityType/MaintPriorityColorCode">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMTimeUnitVHType/TimeUnitDurationInSeconds">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_PMTimeUnitVHType/UnitOfMeasureNumberOfDecimals">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_Supplier_VHType/AuthorizationGroup">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_Supplier_VHType/SupplierAccountGroup">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_Supplier_VHType/IsBusinessPurposeCompleted">
+            <Annotation Term="UI.HiddenFilter" />
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_TechnicalObjectType/WorkCenterInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_TechnicalObjectType/WorkCenterTypeCode">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_TechnicalObjectType/MaintObjectLocAcctAssgmtNmbr">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_TechnicalObjectType/MaintObjectInternalID">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_TechnicalObjectType/FuncLocStrucIdentifyingLevel">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_TechnicalObjectType/FuncLocStruc2ndIdentifyingLvl">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_TechnicalObjectType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="Common.Text" Path="to_TechObjIsEquipOrFuncnlLoc/TechObjIsEquipOrFuncnlLoc_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_TechnicalObjectType">
+            <Annotation Term="Communication.Contact">
+               <Record>
+                  <PropertyValue Property="adr">
+                     <Collection>
+                        <Record>
+                           <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred" />
+                           <PropertyValue Property="country" Path="ManufacturerCountry" />
+                        </Record>
+                     </Collection>
+                  </PropertyValue>
+               </Record>
+            </Annotation>
+            <Annotation Term="Communication.Address">
+               <Record>
+                  <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred" />
+                  <PropertyValue Property="country" Path="ManufacturerCountry" />
+               </Record>
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_TechObjIsEquipOrFuncnlLocType/TechObjIsEquipOrFuncnlLoc">
+            <Annotation Term="Common.Text" Path="TechObjIsEquipOrFuncnlLoc_Text">
+               <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotation>
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_WorkforcePersonSrchHelpType/AuthorizationGroup">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+         <Annotations Target="EAM_MALFUNCTION_MANAGE.I_WorkforcePersonSrchHelpType/IsBusinessPurposeCompleted">
+            <Annotation Term="UI.Hidden" />
+         </Annotations>
+      </Schema>
+   </edmx:DataServices>
+</edmx:Edmx>

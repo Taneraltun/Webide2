@@ -1,0 +1,84 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Dialog showHeader="true" title="{i18n>Material}">
+		<!--<content>-->
+		<l:VerticalLayout width="40rem">
+			<!--<l:HorizontalLayout>-->
+			<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+				adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+				singleContainerFullSize="false">
+				<f:content>
+					<Label text="{i18n>MATNR}"/>
+					<Input id="inpSource" editable="true" width="60%" value="{generalDAta>/Auart}" change="changeSource" showSuggestion="false"
+						showValueHelp="true" valueHelpOnly="false" valueHelpRequest="handleValueHelpBatch"/>
+					<!--<Input value="{singleMaterialModel>/Matnr}" maxLength="40" showValueHelp="true">-->
+					<!--	<layoutData>-->
+					<!--		<l:GridData span="XL6 L6 M6 S12"/>-->
+					<!--	</layoutData>-->
+					<!--</Input>-->
+					<Label text="{i18n>MAKTX}"/>
+					<Input value="{singleMaterialModel>/Maktx}" maxLength="40">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>MENGE}"/>
+					<Input value="{singleMaterialModel>/Menge}" maxLength="17">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>EINHEIT}"/>
+					<Input value="{singleMaterialModel>/Einheit}" maxLength="20" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>LGORT}"/>
+					<Input value="{singleMaterialModel>/Lgort}" maxLength="4" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL9 L9 M6 S4"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>WERKS}"/>
+					<Input value="{singleMaterialModel>/Werks}" maxLength="4">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>CHARG}"/>
+					<Input value="{singleMaterialModel>/Charg}" maxLength="10" showValueHelp="true">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>NETPR}"/>
+					<Input value="{singleMaterialModel>/Netpr}" maxLength="18">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>NETWR}"/>
+					<Input value="{singleMaterialModel>/Netwr}" maxLength="14">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+					<Label text="{i18n>LABST}"/>
+					<Input value="{singleMaterialModel>/Labst}" maxLength="17">
+						<layoutData>
+							<l:GridData span="XL6 L6 M6 S12"/>
+						</layoutData>
+					</Input>
+				</f:content>
+			</f:SimpleForm>
+			<!--</l:HorizontalLayout>-->
+		</l:VerticalLayout>
+		<!--</content>-->
+		<buttons>
+			<Button id="buttonZFOTSubmitCloseButton" text="{i18n>SubmitClose}" press="onAddCloseMaterial" type="Transparent"/>
+			<Button id="buttonZFOTSubmitButton" text="{i18n>Submit}" press="onAddMaterial" type="Transparent"/>
+			<Button text="{i18n>Cancel}" press="onCloseDialog" type="Transparent"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
